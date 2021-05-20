@@ -11,7 +11,7 @@ The knowledge graph we use is wikidata and freebase.
 
 ## Data Processing Workflow
 
-```
+``` sh
 For each Wikipedia article:
     Replace ancor text by wikipedia title
     Do Coreference Resolution  
@@ -26,5 +26,5 @@ For each Wikipedia article:
             Detect edge between them
             (maybe do something to make the edge detection more accurate)
 ```
-The entities and edges consist of the input subgraph, the sentence as the groundtruth sentence 
 
+The entities and edges consist of the input subgraph, the sentence as the groundtruth sentence 
