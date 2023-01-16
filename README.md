@@ -1,8 +1,7 @@
-# Graph Describer
+# Graph Narrator
 
-This repository is about the idir project -- graphnarrattor. What it does is to generate descriptions for a subgraph in knowledge graph.
-Now it is on the first stage, patterns to describe an edge in knowledge graph.
-The knowledge graph we use is wikidata and freebase.
+This repository is about the project -- graphnarrattor. It is the implementation of our paper Natural Language Generation from Large-Scale Open-Domain
+Knowledge Graphs which is submitted to ACL 2023. Graphnarrator aims at automatically generating natural language descriptions for a subgraph in knowledge graph. The training corpus we use is Wikipedia article, and the knowledge graph we use is processed Freebase that removed reverse triples and mediator nodes.
 
 ## Raw data path
 
