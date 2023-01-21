@@ -1,7 +1,6 @@
 # Graph Narrator
 
-This repository is about the project -- Graph Narrattor. It is the implementation of our paper Natural Language Generation from Large-Scale Open-Domain
-Knowledge Graphs which is submitted to ACL 2023. Graph Narrator aims at automatically generating natural language descriptions for a subgraph in knowledge graph. The training corpus we use is Wikipedia article, and the knowledge graph we use is processed Freebase that removed reverse triples and mediator nodes.
+This repository is about the project -- Graph Narrattor. Graph Narrator aims at automatically generating natural language descriptions for a subgraph in knowledge graph. The training corpus we use is Wikipedia article, and the knowledge graph we use is processed Freebase that removed reverse triples and mediator nodes.
 
 ## Dataset
 
