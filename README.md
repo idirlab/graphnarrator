@@ -5,7 +5,7 @@ Knowledge Graphs which is submitted to ACL 2023. Graph Narrator aims at automati
 
 ## Dataset
 
-The dataset can be downloaded here  https://anonymfile.com/n0dyl/dataset-complete.zip![image](https://user-images.githubusercontent.com/44850160/213841988-3ed2934b-0023-4b83-9c46-eafc67762c5c.png)
+The dataset can be downloaded here  https://anonymfile.com/n0dyl/dataset-complete.zip
 
 
 
