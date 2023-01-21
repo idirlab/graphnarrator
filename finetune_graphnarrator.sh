@@ -6,10 +6,10 @@ if [ "$#" -lt 2 ]; then
 fi
 
 if [[ ${1} == *"t5"* ]]; then
-  bash webnlg/finetune_graph2text.sh ${1} ${2}
+  bash graphnarrator/finetune_t5.sh ${1} ${2}
 fi
 if [[ ${1} == *"bart"* ]]; then
-  bash webnlg/finetune_graph2text_bart.sh ${1} ${2}
+  bash graphnarrator/finetune_bart.sh ${1} ${2}
 fi
 
 
