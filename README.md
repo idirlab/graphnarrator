@@ -3,10 +3,13 @@
 This repository is about the project -- Graph Narrattor. It is the implementation of our paper Natural Language Generation from Large-Scale Open-Domain
 Knowledge Graphs which is submitted to ACL 2023. Graph Narrator aims at automatically generating natural language descriptions for a subgraph in knowledge graph. The training corpus we use is Wikipedia article, and the knowledge graph we use is processed Freebase that removed reverse triples and mediator nodes.
 
-## Raw data path
+## Dataset
 
-- Wikipedia article: /home/xiao/Projects/graphdescriber/data/GraphDescriber_Dataset_with_Wikification/WikipediaArticles_original/text
-- TODO: add entity mapping path
+The dataset can be downloaded here  https://anonymfile.com/n0dyl/dataset-complete.zip![image](https://user-images.githubusercontent.com/44850160/213841988-3ed2934b-0023-4b83-9c46-eafc67762c5c.png)
+
+
+
+https://anonymfile.com/89nQ6/wikititle2midnpy.zip
 
 ## Data Processing Workflow
 
