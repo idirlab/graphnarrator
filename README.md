@@ -9,8 +9,9 @@ The dataset can be downloaded https://anonymfile.com/n0dyl/dataset-complete.zip
 The wikipedia title to Freebase entity mid mapping file can be downloaded https://anonymfile.com/89nQ6/wikititle2midnpy.zip
 
 ## Setup
-
-
+We encourage create conda enviroment to run the code.
+To create the enviroment, run 
+> ./setup_environment.sh 
 
 ## Trained Models
 
