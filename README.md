@@ -10,8 +10,15 @@ The wikipedia title to Freebase entity mid mapping file can be downloaded https:
 
 ## Setup
 We encourage create conda enviroment to run the code.
-To create the enviroment, run 
+To create the Python enviroment, run 
 > ./setup_environment.sh 
+
+## Preprocessing
+Unzip the dataset folder, run
+> python graphnarrator/data/generate_input_graphnarrator.py <dataset_xml_folder_path>
+
+## Finetune
+
 
 ## Trained Models
 
