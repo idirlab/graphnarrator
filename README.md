@@ -1,6 +1,6 @@
 # Graph Narrator
 
-This repository is about the project -- Graph Narrattor. Graph Narrator aims at automatically generating natural language descriptions subgraphs in a knowledge graph. The training corpus we use is Wikipedia article, and the knowledge graph we use is processed Freebase that removed reverse triples and mediator nodes.
+This repository is for the project -- Graph Narrattor. Graph Narrator aims at automatically generating natural language descriptions subgraphs in a knowledge graph. The training corpus we use is Wikipedia article, and the knowledge graph we use is processed Freebase that removed reverse triples and mediator nodes.
 
 ## Dataset
 
