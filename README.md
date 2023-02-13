@@ -17,7 +17,19 @@ To create the Python enviroment, run
 Unzip the dataset folder, run
 > python graphnarrator/data/generate_input_graphnarrator.py <dataset_xml_folder_path>
 
-## Finetune
+## Finetuning
+
+To fine-tune the T5 model on graph narrator dataset, run 
+> ./graphnarrator/finetune_t5.sh t5-<small/base/large> <gpu_id>
+
+Example
+> ./graphnarrator/finetune_t5.sh t5-large 0
+
+To fine-tune the BART model on graph narrator dataset, run 
+> ./graphnarrator/finetune_bart.sh bart-<base/large> <gpu_id>
+
+Example
+> ./graphnarrator/finetune_bart.sh bart-large 1
 
 
 ## Trained Models
