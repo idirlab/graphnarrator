@@ -33,6 +33,18 @@ Example
 
 ## Decoding
 
+To decode the T5 model that has been fine-tuned on graph narrator dataset, run 
+> ./graphnarrator/test_t5.sh <fine-tuned_model_path> <gpu_id>
+
+Example
+> ./graphnarrator/test_t5.sh /graphnarrator/t5-large-trim/best_tfmr 2
+
+
+To decode the BART model that has been fine-tuned on graph narrator dataset, run 
+> ./graphnarrator/test_bart.sh <fine-tuned_model_path> <gpu_id>
+
+Example
+> ./graphnarrator/test_bart.sh /graphnarrator/bart-large-trim/best_tfmr 3
 
 
 ## Trained Models
