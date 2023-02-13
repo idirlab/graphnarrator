@@ -49,7 +49,7 @@ Example
 
 ## Trained Models
 
-T5-large model trained on Graph Narrator without sentence trimmer then finetuned on WebNLG dataset can be downloaded https://anonymfile.com/WYd54/best-tfmrgnoriginalwebnlg.zip
+The T5-large model trained on Graph Narrator without sentence trimmer and then finetuned on WebNLG dataset can be downloaded from https://anonymfile.com/WYd54/best-tfmrgnoriginalwebnlg.zip
 
 
-T5-large model trained on Graph Narrator with sentence trimmer then finetuned on WebNLG dataset can be downloaded https://anonymfile.com/bVqmj/best-tfmrgntrimwebnlg.zip
+The T5-large model trained on Graph Narrator with sentence trimmer and then finetuned on WebNLG dataset can be downloaded from https://anonymfile.com/bVqmj/best-tfmrgntrimwebnlg.zip
