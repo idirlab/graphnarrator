@@ -1,16 +1,16 @@
 # Graph Narrator
 
-Graph Narrator aims at automatically generating natural language descriptions subgraphs in a knowledge graph. The training corpus we use is Wikipedia article, and the knowledge graph we use is processed Freebase that removed reverse triples and mediator nodes.
+Graph Narrator aims at automatically generating natural language descriptions of subgraphs in knowledge graphs. The training corpus we use is Wikipedia article, and the knowledge graph we use is processed Freebase in which reverse triples and mediator nodes are removed.
 
 ## Dataset
 
-The dataset can be downloaded https://anonymfile.com/n0dyl/dataset-complete.zip
+The dataset can be downloaded from https://anonymfile.com/n0dyl/dataset-complete.zip
 
-The wikipedia title to Freebase entity mid mapping file can be downloaded https://anonymfile.com/89nQ6/wikititle2midnpy.zip
+The Wikipedia title to Freebase entity mid mapping file can be downloaded from https://anonymfile.com/89nQ6/wikititle2midnpy.zip
 
 ## Setup
-We encourage create conda enviroment to run the code.
-To create the Python enviroment, run 
+We recommend create Conda enviroment to run the code.
+To create the Conda enviroment, run 
 > ./setup_environment.sh 
 
 ## Preprocessing
