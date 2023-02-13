@@ -31,6 +31,9 @@ To fine-tune the BART model on graph narrator dataset, run
 Example
 > ./graphnarrator/finetune_bart.sh bart-large 1
 
+## Decoding
+
+
 
 ## Trained Models
 
