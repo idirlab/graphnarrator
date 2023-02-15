@@ -49,7 +49,6 @@ Example
 
 ## Trained Models
 
-The T5-large model checkpoint trained on Graph Narrator without sentence trimmer and then finetuned on WebNLG dataset can be downloaded from https://anonymfile.com/WYd54/best-tfmrgnoriginalwebnlg.zip
-
+The T5-large model checkpoint trained on Graph Narrator without sentence trimmer and then finetuned on WebNLG dataset can be downloaded from https://ufile.io/hxykjsrl
 
 The T5-large model trained on Graph Narrator with sentence trimmer and then finetuned on WebNLG dataset can be downloaded from https://anonymfile.com/bVqmj/best-tfmrgntrimwebnlg.zip
