@@ -2,8 +2,7 @@
 
 ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-GPUID=$3
-CHECK_POINT=$2
+GPUID=$2
 MODEL=$1
 FOLDER=outputs/test_model
 
@@ -25,7 +24,6 @@ python ${ROOT_DIR}/finetune.py \
 --eval_batch_size=8 \
 --gpus 1 \
 --output_dir=$OUTPUT_DIR \
---checkpoint=$CHECK_POINT \
 --max_source_length=384 \
 --max_target_length=384 \
 --val_max_target_length=384 \
