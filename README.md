@@ -48,7 +48,13 @@ Example
 
 
 ## Trained Models
+The T5-large model trained on Graph Narrator dataset without sentence trimmer can be downloaded from
+https://ufile.io/6t6825sr
 
-The T5-large model checkpoint trained on Graph Narrator without sentence trimmer and then finetuned on WebNLG dataset can be downloaded from https://ufile.io/hxykjsrl
+The T5-large model trained on Graph Narrator dataset with sentence trimmer can be downloaded from
+https://ufile.io/257iqiqc
 
-The T5-large model trained on Graph Narrator with sentence trimmer and then finetuned on WebNLG dataset can be downloaded from https://ufile.io/50p9dp1c
+The T5-large model trained on Graph Narrator without sentence trimmer and then finetuned on WebNLG dataset can be downloaded from https://ufile.io/hxykjsrl
+
+The T5-large model trained on Graph Narrator with sentence trimmer and then finetuned on WebNLG dataset can be downloaded from 
+https://ufile.io/50p9dp1c
