@@ -15,18 +15,18 @@ To create the Conda enviroment, run
 
 ## Preprocessing
 Unzip the dataset folder, run
-> python graphnarrator/data/generate_input_graphnarrator.py <dataset_xml_folder_path>
+> python graphnarrator/data/generate_input_graphnarrator.py dataset_xml_folder_path
 
 ## Finetuning
 
 To fine-tune the T5 model on graph narrator dataset, run 
-> ./graphnarrator/finetune_t5.sh t5-<small/base/large> <gpu_id>
+> ./graphnarrator/finetune_t5.sh t5-<small/base/large> gpu_id
 
 Example
 > ./graphnarrator/finetune_t5.sh t5-large 0
 
 To fine-tune the BART model on graph narrator dataset, run 
-> ./graphnarrator/finetune_bart.sh bart-<base/large> <gpu_id>
+> ./graphnarrator/finetune_bart.sh bart-<base/large> gpu_id
 
 Example
 > ./graphnarrator/finetune_bart.sh bart-large 1
@@ -34,14 +34,14 @@ Example
 ## Decoding
 
 To decode the T5 model that has been fine-tuned on graph narrator dataset, run 
-> ./graphnarrator/test_t5.sh <fine-tuned_model_path> <gpu_id>
+> ./graphnarrator/test_t5.sh fine-tuned_model_path gpu_id
 
 Example
 > ./graphnarrator/test_t5.sh /graphnarrator/t5-large-trim/best_tfmr 2
 
 
 To decode the BART model that has been fine-tuned on graph narrator dataset, run 
-> ./graphnarrator/test_bart.sh <fine-tuned_model_path> <gpu_id>
+> ./graphnarrator/test_bart.sh fine-tuned_model_path gpu_id
 
 Example
 > ./graphnarrator/test_bart.sh /graphnarrator/bart-large-trim/best_tfmr 3
