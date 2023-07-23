@@ -4,10 +4,9 @@ Graph Narrator aims at automatically generating natural language descriptions of
 
 ## Dataset
 
-The dataset can be downloaded from https://ufile.io/4fdbp22h
+The dataset can be downloaded from https://ufile.io/fvmi2bm4
 
-The Wikipedia title to Freebase entity mid mapping file can be downloaded from https://ufile.io/hnfq8trx
-
+The Wikipedia title to Freebase entity mid mapping file can be downloaded from https://ufile.io/srnf1d0i
 ## Setup
 We recommend createv Conda enviroment to run the code.
 To create the Conda enviroment, run 
@@ -49,14 +48,14 @@ Example
 
 ## Trained Models
 The T5-large model trained on Graph Narrator dataset without sentence trimmer can be downloaded from
-https://ufile.io/l6lubs6p
+https://ufile.io/j7q91vso
 
 The T5-large model trained on Graph Narrator dataset with sentence trimmer can be downloaded from
-https://ufile.io/er9j74m3
+https://ufile.io/pu7z1qbm
 
 The T5-large model trained on Graph Narrator without sentence trimmer and then finetuned on WebNLG dataset can be downloaded from 
-https://ufile.io/zem8d3y6
+https://ufile.io/9vn0strm
 
 The T5-large model trained on Graph Narrator with sentence trimmer and then finetuned on WebNLG dataset can be downloaded from 
-https://ufile.io/zycdnr5b
+https://ufile.io/lsu12mqz
 
