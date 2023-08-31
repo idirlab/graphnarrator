@@ -6,6 +6,11 @@ max_rec = 0x100000
 resource.setrlimit(resource.RLIMIT_STACK, [0x100 * max_rec, resource.RLIM_INFINITY])
 sys.setrecursionlimit(max_rec)
 
+
+import spacy
+nlp = spacy.load("en_core_web_sm", disable=["parser", "tagger", "ner"])
+# Create a blank Tokenizer with just the English vocab
+
 import numpy as np
 from collections import Counter, defaultdict
 import unidecode
@@ -68,11 +73,27 @@ def get_statistic(data):
         instance_cnt = 0
         for _, instances in domains.items():
             for instance in instances:
-                sm_token += len(instance['sdp_sentence'].split())
-                sm_str += len(instance['sdp_sentence'])
+                sm_token += len(nlp.tokenizer(instance['sentence_text'].split()))
+                sm_token += len(nlp.tokenizer(instance['sdp_sentence'].split()))
                 instance_cnt += 1
         cnt[triple_num] = [sm_token/instance_cnt, sm_str/instance_cnt]
     return cnt
+
+def get_sentence_length_distribution(data):
+    orig_cnt = Counter()
+    sdp_cnt = Counter()
+    total_cnt = 0
+    for _, domains in data.items():
+        for _, instances in domains.items():
+            for instance in instances:
+                orig_token_cnt = len(nlp.tokenizer((instance['sentence_text'])))
+                sdp_token_cnt = len(nlp.tokenizer((instance['sdp_sentence'])))
+                orig_cnt[orig_token_cnt] += 1
+                sdp_cnt[sdp_token_cnt] += 1
+                total_cnt += 1
+                if total_cnt%100000==0:
+                    print('Processed instances: ', total_cnt)
+    return orig_cnt, sdp_cnt, total_cnt
 
 def filter_by_rouge_threshold(data, threshold):
     cnt = defaultdict(lambda: [0, 0])
@@ -106,9 +127,9 @@ def filter_by_rouge_threshold(data, threshold):
 
 if __name__ == '__main__':
     ##### read data from npy format ####
-    dev_data = read_data('./dataset_complete/npy_format_dataset_complete/dev.npy')
-    test_data = read_data('./dataset_complete/npy_format_dataset_complete/test.npy')
-    train_data = read_data('./dataset_complete/npy_format_dataset_complete/train.npy')
+    # dev_data = read_data('./dataset_complete/npy_format_dataset_complete/dev.npy')
+    # test_data = read_data('./dataset_complete/npy_format_dataset_complete/test.npy')
+    # train_data = read_data('./dataset_complete/npy_format_dataset_complete/train.npy')
 
     #### get statistic ####
     # dev_cnt = get_statistic(dev_data)
@@ -119,14 +140,24 @@ if __name__ == '__main__':
     # print("Train statistic: ", train_cnt)
 
     #### filter by rouge score ####
-    threshold = 0.8
-    dev_cnt, dev_data_with_rouge = filter_by_rouge_threshold(dev_data, threshold=threshold)
-    np.save('./dataset_complete/npy_format_dataset_complete/dev_with_rouge_'+str(threshold)+'.npy', dev_data_with_rouge)
-    test_cnt, test_data_with_rouge = filter_by_rouge_threshold(test_data, threshold=threshold)
-    np.save('./dataset_complete/npy_format_dataset_complete/test_with_rouge_'+str(threshold)+'.npy', test_data_with_rouge)
-    train_cnt, train_data_with_rouge = filter_by_rouge_threshold(train_data, threshold=threshold)
-    np.save('./dataset_complete/npy_format_dataset_complete/train_with_rouge_'+str(threshold)+'.npy', train_data_with_rouge)
+    # threshold = 0.3
+    # dev_cnt, dev_data_with_rouge = filter_by_rouge_threshold(dev_data, threshold=threshold)
+    # np.save('./dataset_complete/npy_format_dataset_complete/dev_with_rouge_'+str(threshold)+'.npy', dev_data_with_rouge)
+    # test_cnt, test_data_with_rouge = filter_by_rouge_threshold(test_data, threshold=threshold)
+    # np.save('./dataset_complete/npy_format_dataset_complete/test_with_rouge_'+str(threshold)+'.npy', test_data_with_rouge)
+    # train_cnt, train_data_with_rouge = filter_by_rouge_threshold(train_data, threshold=threshold)
+    # np.save('./dataset_complete/npy_format_dataset_complete/train_with_rouge_'+str(threshold)+'.npy', train_data_with_rouge)
 
-    print("Dev statistic: ", dev_cnt)
-    print("Test statistic: ", test_cnt)
-    print("Train statistic: ", train_cnt)
+    # print("Dev Rouge statistic: ", dev_cnt)
+    # print("Test Rouge statistic: ", test_cnt)
+    # print("Train Rouge statistic: ", train_cnt)
+
+
+    # get sentence length distribution of original sentence and sdp sentence
+    # dev_orig_cnt, dev_sdp_cnt, dev_total = get_sentence_length_distribution(dev_data)
+    # test_orig_cnt, test_sdp_cnt, test_total = get_sentence_length_distribution(test_data)
+    # train_orig_cnt, train_sdp_cnt, train_total = get_sentence_length_distribution(train_data)
+
+    # print("Dev sentence length distribution: ", dev_orig_cnt, dev_sdp_cnt, dev_total)
+    # print("Test sentence length distribution: ", test_orig_cnt, test_sdp_cnt, test_total)
+    # print("Train sentence length distribution: ", train_orig_cnt, train_sdp_cnt, train_total)
