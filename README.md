@@ -57,5 +57,4 @@ The T5-large model trained on Graph Narrator without sentence trimmer and then f
 https://ufile.io/ph6dm6wf
 
 The T5-large model trained on Graph Narrator with sentence trimmer and then finetuned on WebNLG dataset can be downloaded from 
-https://ufile.io/ph6dm6wf
-
+https://ufile.io/42i4m9og
