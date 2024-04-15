@@ -221,7 +221,7 @@ for d in datasets:
     dataset_points.append(datapoints)
 
 
-path = os.path.dirname(os.path.realpath(__file__)) + '/webnlg/'
+path = os.path.dirname(os.path.realpath(__file__)) + '/graphnarrative/'
 if not os.path.exists(path):
     os.makedirs(path)
 
