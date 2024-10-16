@@ -77,7 +77,7 @@ This section provides details on how to perform inference using the T5 model (`g
 
 ## Inference with the T5 Model
 
-- To perform inference using the T5 model, prepend the input with `"translate graph to English"`.
+- To perform inference using the T5 model, prepend the input with `"translate Graph to English:"`.
 - The input graph should follow the format `<H> <R> <T>`, where:
   - `<H>`: Head entity
   - `<R>`: Relation
@@ -88,7 +88,7 @@ This section provides details on how to perform inference using the T5 model (`g
 - An example graph input for inference is:
 
   ```text
-  translate graph to English <H> Paris <R> is the capital of <T> France
+  translate Graph to English: <H> Paris <R> is the capital of <T> France
   ```
 
 Head Entity (<H>): Paris
@@ -99,7 +99,7 @@ Tail Entity (<T>): France```
 
 Ensure the input format is correct for the model to generate the desired output.
 The head (<H>), relation (<R>), and tail (<T>) entities should be clearly defined.
-Always start the input with "translate graph to English" to indicate the type of inference required.
+Always start the input with "translate Graph to English" to indicate the type of inference required.
 
 ### Requirements
 
